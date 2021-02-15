@@ -9,7 +9,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  access_key = var.accessID
+  access_key = var.Accesskey
   secret_key = var.secretkey
   region = "ap-south-1"
 }
@@ -66,7 +66,7 @@ resource "aws_instance" "prasee_aws" {
 
 }
 
-variable "accessID" {
+variable "Accesskey" {
   type = string
 }
 
