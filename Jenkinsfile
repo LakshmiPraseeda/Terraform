@@ -7,9 +7,9 @@ pipeline
 	    {
 		steps
 		    {
-    			withCredentials([string(credentialsId: 'Accesskey', variable: 'Accesskey')]) { //set SECRET with the credential content
+    			withCredentials([string(credentialsId: 'aws-credentials', variable: 'aws-credentials')]) { //set SECRET with the credential content
         		//echo "My secret text is '${access}'"
-				withCredentials([string(credentialsId: 'secretkey', variable: 'secretkey')]) { //set SECRET with the credential content
+				//withCredentials([string(credentialsId: 'secretkey', variable: 'secretkey')]) { //set SECRET with the credential content
         			//echo "My secret text is '${secr}'"
 					withCredentials([file(credentialsId: 'jenkins', variable: 'jenkins')]) {
 						withCredentials([file(credentialsId: 'jenkins_pem', variable: 'jenkins_pem')]) {
