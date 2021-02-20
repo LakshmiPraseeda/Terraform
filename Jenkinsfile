@@ -7,7 +7,7 @@ pipeline
 	    {
 		steps
 		    {
-    			withCredentials([string(credentialsId: 'accessID', variable: 'accessID')]) { //set SECRET with the credential content
+    			withCredentials([string(credentialsId: 'Accesskey', variable: 'Accesskey')]) { //set SECRET with the credential content
         		//echo "My secret text is '${access}'"
 				withCredentials([string(credentialsId: 'secretkey', variable: 'secretkey')]) { //set SECRET with the credential content
         			//echo "My secret text is '${secr}'"
